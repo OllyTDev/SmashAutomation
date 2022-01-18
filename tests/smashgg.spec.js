@@ -4,7 +4,7 @@ var json = require('../config/config.json');
 
 
 test('Automatic neomax event page', async ({ page }) => {
-  test.setTimeout(120000);
+  test.setTimeout(300000);
   // Go to https://smash.gg/
   await page.goto('https://smash.gg/');
   // Click div[role="button"]
@@ -35,25 +35,25 @@ test('Automatic neomax event page', async ({ page }) => {
   // Click [placeholder="My Awesome Tournament"]
   await page.click('[placeholder="My Awesome Tournament"]');
   // Fill [placeholder="My Awesome Tournament"]
-  await page.fill('[placeholder="My Awesome Tournament"]', 'Neomax # - Nottingham Smash Bros Weekly');
+  await page.fill('[placeholder="My Awesome Tournament"]', json.tournamentTitle);
   // Click [placeholder="hello@smash.gg"]
   await page.click('[placeholder="hello@smash.gg"]');
   // Fill [placeholder="hello@smash.gg"]
-  await page.fill('[placeholder="hello@smash.gg"]', 'maxcancelssb@gmail.com');
+  await page.fill('[placeholder="hello@smash.gg"]', json.contactEmail);
   // Click [placeholder="mm/dd/yyyy hh:mm (a|p)m"]
   await page.click('[placeholder="mm/dd/yyyy hh:mm (a|p)m"]');
   // Fill [placeholder="mm/dd/yyyy hh:mm (a|p)m"]
-  await page.fill('[placeholder="mm/dd/yyyy hh:mm (a|p)m"]', '01/20/2022 06:00 pm');
+  await page.fill('[placeholder="mm/dd/yyyy hh:mm (a|p)m"]', json.startTime);
   // Click text=End Date *End Date >> [placeholder="mm/dd/yyyy hh:mm (a|p)m"]
   await page.click('text=End Date *End Date >> [placeholder="mm/dd/yyyy hh:mm (a|p)m"]');
   // Fill text=End Date *End DateDate is required >> [placeholder="mm/dd/yyyy hh:mm (a|p)m"]
-  await page.fill('text=End Date *End DateDate is required >> [placeholder="mm/dd/yyyy hh:mm (a|p)m"]', '01/20/2022 10:30 pm');
+  await page.fill('text=End Date *End DateDate is required >> [placeholder="mm/dd/yyyy hh:mm (a|p)m"]', json.endTime);
   // Click text=Copy Tournament Settings
   await page.click('text=Copy Tournament Settings');
   // Click text=Search for tournament
   await page.click('text=Search for tournament');
   // Click text=Neomax 2022 #2 - Nottingham Smash Bros weekly
   await page.click('text=Neomax 2022 #2 - Nottingham Smash Bros weekly');
-  await new Promise(r => setTimeout(r, 110000));
+  await new Promise(r => setTimeout(r, 290000));
   // ---------------------
 });
