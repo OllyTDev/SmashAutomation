@@ -1,0 +1,7 @@
+node_modules/
+test-results/
+playwright-report/
+config/config.json
+.vscode/launch.json
+.github/workflows/playwright.yml
+package-lock.json
