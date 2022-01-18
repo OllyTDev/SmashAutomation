@@ -1,4 +1,4 @@
-# Smash.gg Neomax automation
+# Smash.gg automation
 
 ## Intro
 
