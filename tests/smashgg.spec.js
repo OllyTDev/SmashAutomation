@@ -47,7 +47,7 @@ test('Automatic neomax event page', async ({ page }) => {
   // Click text=End Date *End Date >> [placeholder="mm/dd/yyyy hh:mm (a|p)m"]
   await page.click('text=End Date *End Date >> [placeholder="mm/dd/yyyy hh:mm (a|p)m"]');
   // Fill text=End Date *End DateDate is required >> [placeholder="mm/dd/yyyy hh:mm (a|p)m"]
-  await page.fill('text=End Date *End DateDate is required >> [placeholder="mm/dd/yyyy hh:mm (a|p)m"]', json.endTime);
+  await page.fill('text=End Date *End Date >> [placeholder="mm/dd/yyyy hh:mm (a|p)m"]', json.endTime);
   // Click text=Copy Tournament Settings
   await page.click('text=Copy Tournament Settings');
   // Click text=Search for tournament
