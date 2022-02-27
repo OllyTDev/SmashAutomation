@@ -2,6 +2,58 @@ const { test, expect } = require('@playwright/test');
 
 var json = require('../config/config.json');
 
+function getDayFromConfig(dayOfWeek) {
+  switch (dayOfWeek.toLowerCase()) {
+    case "monday":
+      dayAsNumber = 1;
+      break;
+    case "tuesday":
+      dayAsNumber = 2;
+      break;
+    case "wednesday":
+      dayAsNumber = 3;
+      break;
+    case "thursday":    
+      dayAsNumber = 4;
+      break;
+    case "friday":    
+      dayAsNumber = 5;
+      break;   
+    case "saturday":    
+      dayAsNumber = 6;
+      break;   
+    case "sunday":    
+      dayAsNumber = 7;
+      break;       
+  }
+  return dayAsNumber;
+}
+
+function createSmashGGDate(d) {
+
+  if(d.getMonth().toString().length == 1){
+      var month = d.getMonth()+1 
+      month = "0" + month 
+  } else {
+      var month = d.getMonth()+1
+  }
+
+  if(d.getDate().toString().length == 1) {
+      var date = "0" + d.getDate()
+  } else {
+      var date = d.getDate()
+  }
+  
+  var x = month + "/" + date + "/" + d.getFullYear()
+  return x
+}
+
+var date = new Date();
+date.setDate(date.getDate() + (7 - date.getDay()) % 7 + getDayFromConfig(json.dayOfWeek));
+
+var dateOfNextEvent = createSmashGGDate(date)
+var startDate = dateOfNextEvent + " " + json.startTime
+var endDate = dateOfNextEvent + " " + json.endTime
 
 test('Automatic neomax event page', async ({ page }) => {
   test.setTimeout(300000);
@@ -43,11 +95,11 @@ test('Automatic neomax event page', async ({ page }) => {
   // Click [placeholder="mm/dd/yyyy hh:mm (a|p)m"]
   await page.click('[placeholder="mm/dd/yyyy hh:mm (a|p)m"]');
   // Fill [placeholder="mm/dd/yyyy hh:mm (a|p)m"]
-  await page.fill('[placeholder="mm/dd/yyyy hh:mm (a|p)m"]', json.startTime);
+  await page.fill('[placeholder="mm/dd/yyyy hh:mm (a|p)m"]', startDate);
   // Click text=End Date *End Date >> [placeholder="mm/dd/yyyy hh:mm (a|p)m"]
   await page.click('text=End Date *End Date >> [placeholder="mm/dd/yyyy hh:mm (a|p)m"]');
   // Fill text=End Date *End DateDate is required >> [placeholder="mm/dd/yyyy hh:mm (a|p)m"]
-  await page.fill('text=End Date *End Date >> [placeholder="mm/dd/yyyy hh:mm (a|p)m"]', json.endTime);
+  await page.fill('text=End Date *End Date >> [placeholder="mm/dd/yyyy hh:mm (a|p)m"]', endDate);
   // Click text=Copy Tournament Settings
   await page.click('text=Copy Tournament Settings');
   // Click text=Search for tournament
