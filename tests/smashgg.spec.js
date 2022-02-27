@@ -31,14 +31,14 @@ function getDayFromConfig(dayOfWeek) {
 
 function createSmashGGDate(d) {
 
-  if(d.getMonth().toString.length == 1){
+  if(d.getMonth().toString().length == 1){
       var month = d.getMonth()+1 
       month = "0" + month 
   } else {
       var month = d.getMonth()+1
   }
 
-  if(d.getDate().toString.length == 1) {
+  if(d.getDate().toString().length == 1) {
       var date = "0" + d.getDate()
   } else {
       var date = d.getDate()
