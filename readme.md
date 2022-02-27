@@ -32,13 +32,15 @@ Next, you'll need to create a file in the `config\` folder. Create a file in thi
     "password": "YourPasswordHere",
     "tournamentTitle": "TournamentTitleHere",
     "contactEmail": "ContactEmailHere",
-    "startTime": "MM/DD/YYYY HH:MM pm",
-    "endTime": "MM/DD/YYYY HH:MM pm"
+    "startTime": "HH:MM pm",
+    "endTime": "HH:MM pm",
+    "dayOfWeek": "dayOfWeek"
 }
 ```
 Now, fill in the details above into the file. 
 - Username and password are your login details for smash.gg.
 - tournamentTitle is the title of your tournament
+- Day of week should be the full name of the day you run on i.e: "Monday" or "Thursday" Etc, capitalizations shouldn't matter
 
 Once that has finished running, you're ready to run this script in full!
 
