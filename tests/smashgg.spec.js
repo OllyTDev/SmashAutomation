@@ -49,7 +49,7 @@ function createSmashGGDate(d) {
 }
 
 var date = new Date();
-date.setDate(date.getDate() + (7 - date.getDay()) % 7 + getDayFromConfig(json.dayOfWeek));
+date.setDate(date.getDate() + (date.getDay()) % 7 + getDayFromConfig(json.dayOfWeek));
 
 var dateOfNextEvent = createSmashGGDate(date)
 var startDate = dateOfNextEvent + " " + json.startTime
@@ -105,7 +105,7 @@ test('Automatic neomax event page', async ({ page }) => {
   // Click text=Search for tournament
   await page.click('text=Search for tournament');
   // Click text=Neomax 2022 #2 - Nottingham Smash Bros weekly
-  await page.click('text=Neomax 2022 #5 - Nottingham Smash Bros weekly');
+  await page.click('text=Neomax 2022 #10 - Nottingham Smash Bros weekly');
   await new Promise(r => setTimeout(r, 290000));
   // ---------------------
 });
