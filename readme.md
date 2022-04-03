@@ -14,11 +14,14 @@ Follow the instructions below to run this code;
 
 ## Installation
 
+The below setup is only required to be done once. If you've done this before, skip to 'Running of the script'
+
 First you'll need the appropriate tool to run this code. I recommend git bash: https://gitforwindows.org/ 
 
-Download and install gitBash and then open git bash in the SmashAutomation folder. 
+Download and install gitBash and then open git bash in the SmashAutomation folder. (Once you install gitBash you should be able to right click in a folder and select Git Bash here option).
 
-You'll need to install playwright, playwright test and playwright-cli. To do that, copy and paste the following command into git bash and press enter to run it.
+You'll need to install playwright, playwright test and playwright-cli. 
+To do that, copy and paste the following command into git bash and press enter to run it.
 
 ```
 npm install
@@ -42,7 +45,7 @@ Now, fill in the details above into the file.
 - tournamentTitle is the title of your tournament
 - Day of week should be the full name of the day you run on i.e: "Monday" or "Thursday" Etc, capitalizations shouldn't matter
 
-Once that has finished running, you're ready to run this script in full!
+Once that has finished running, you're ready to run this script in full! 
 
 ## Running of the script
 use the following command from the root folder:
