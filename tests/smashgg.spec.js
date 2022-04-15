@@ -49,7 +49,7 @@ function createSmashGGDate(d) {
 }
 
 var date = new Date();
-date.setDate(date.getDate() + (date.getDay()) % 7 + getDayFromConfig(json.dayOfWeek));
+date.setDate(date.getDate() + (7 - date.getDay()) % 7 + getDayFromConfig(json.dayOfWeek))
 
 var dateOfNextEvent = createSmashGGDate(date)
 var startDate = dateOfNextEvent + " " + json.startTime
