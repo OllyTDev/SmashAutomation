@@ -1,10 +1,10 @@
-# Smash.gg automation
+# start.gg automation
 
 ## Intro
 
-Firstly, assuming you know nothing about code, welcome to my automation script for the smash weeklies. This was created because smash.gg currently (18/01/2022) still doesn't have any way of creating a reoccuring event. And thus this script was born.
+Firstly, assuming you know nothing about code, welcome to my automation script for the smash weeklies. This was created because start.gg currently (18/01/2022) still doesn't have any way of creating a reoccuring event. And thus this script was born.
 
-This script will log in to the appropriate Smash.gg account, fill in your forms as appropriate and leave you in a browser on the smash.gg page. 
+This script will log in to the appropriate start.gg account, fill in your forms as appropriate and leave you in a browser on the start.gg page. 
 
 The script will leave you on the page before it submits therefore you can review the page before submitting.
 
@@ -41,7 +41,7 @@ Next, you'll need to create a file in the `config\` folder. Create a file in thi
 }
 ```
 Now, fill in the details above into the file. 
-- Username and password are your login details for smash.gg.
+- Username and password are your login details for start.gg.
 - tournamentTitle is the title of your tournament
 - Day of week should be the full name of the day you run on i.e: "Monday" or "Thursday" Etc, capitalizations shouldn't matter
 

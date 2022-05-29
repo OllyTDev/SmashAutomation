@@ -5,3 +5,4 @@ config/config.json
 .vscode/launch.json
 .github/workflows/playwright.yml
 package-lock.json
+.vs/
