@@ -20,6 +20,8 @@ First you'll need the appropriate tool to run this code. I recommend git bash: h
 
 Download and install gitBash and then open git bash in the SmashAutomation folder. (Once you install gitBash you should be able to right click in a folder and select Git Bash here option).
 
+Next you'll need to install node. That can be done from here: https://nodejs.org/en/download/
+
 You'll need to install playwright, playwright test and playwright-cli. 
 To do that, copy and paste the following command into git bash and press enter to run it.
 
