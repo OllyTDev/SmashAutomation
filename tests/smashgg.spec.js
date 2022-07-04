@@ -62,7 +62,7 @@ test('Automatic neomax event page', async ({ page }) => {
   // Click button:has-text("I Accept")
   await page.click('button:has-text("I Accept")');
   // Click div[role="button"]
-  await page.click('div[role="button"]');
+  await page.click("[aria-label=\"Login / Register\"]");
   // Click [placeholder="john.smith@gmail.com"]
   await page.click('[placeholder="john.smith@gmail.com"]');
   // Fill [placeholder="john.smith@gmail.com"]
