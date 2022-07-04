@@ -23,6 +23,9 @@ Download and install gitBash and then open git bash in where you want to install
 ```bash
 git clone https://github.com/OllyTDev/SmashAutomation.git
 ```
+This will download the code into the folder you were just in AND will have saved it as a code repo. This means that later on if any updates occur, they can be pulled automatically.
+
+Close that git bash and find where you saved the code you just downloaded and open git bash in the SmashAutomation folder (Right click in folder, open git bash).
 
 Next you'll need to install node. That can be done from here: https://nodejs.org/en/download/
 
@@ -54,11 +57,15 @@ Now, fill in the details above into the file.
 Once that has finished running, you're ready to run this script in full! 
 
 ## Running of the script
-use the following command from the root folder:
 
-``` 
+Copy and paste the following command into your git bash:
+```
+git pull
 npx playwright test --headed
 ```
+
+The first command will pull any updates from the code repo automatically, the second will run the script.
+
 The script will run, log in and create you your template weekly. Remember to:
 
 - Update the title of the weekly with the appropriate number
