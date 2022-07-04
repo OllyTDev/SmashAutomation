@@ -18,7 +18,11 @@ The below setup is only required to be done once. If you've done this before, sk
 
 First you'll need the appropriate tool to run this code. I recommend git bash: https://gitforwindows.org/ 
 
-Download and install gitBash and then open git bash in the SmashAutomation folder. (Once you install gitBash you should be able to right click in a folder and select Git Bash here option).
+Download and install gitBash and then open git bash in where you want to install this code. Once you install gitBash you should be able to right click in a folder and select Git Bash here option. Then run the following command in git bash:
+
+```bash
+git clone https://github.com/OllyTDev/SmashAutomation.git
+```
 
 Next you'll need to install node. That can be done from here: https://nodejs.org/en/download/
 
