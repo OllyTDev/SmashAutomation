@@ -34,6 +34,7 @@ To do that, copy and paste the following command into git bash and press enter t
 
 ```
 npm install
+npx playwright install
 ```
 
 Next, you'll need to create a file in the `config\` folder. Create a file in this folder called `config.json` and copy and paste the following inside of it.
