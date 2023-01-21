@@ -108,6 +108,7 @@ test('Automatic neomax event page', async ({ page }) => {
   // Click text=Search for tournament
   await page.click('text=Search for tournament');
   // Click text=Neomax 2022 #2 - Nottingham Smash Bros weekly
+  await page.fill('text=Search for tournament', "21");
   await page.click('text=Neomax 2022 #21 - Nottingham Smash Bros weekly');
   await new Promise(r => setTimeout(r, 290000));
   // ---------------------
