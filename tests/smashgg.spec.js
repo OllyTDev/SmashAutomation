@@ -108,9 +108,9 @@ test('Automatic neomax event page', async ({ page }) => {
   // Click text=Search for tournament
   await page.click('text=Search for tournament');
   // Fill input[role="combobox"]
-  await page.fill('input[role="combobox"]', '21');
+  await page.fill('input[role="combobox"]', 'Template');
   // Click text=Neomax 2022 #21 - Nottingham FGC Weekly
-  await page.click('text=Neomax 2022 #21 - Nottingham FGC Weekly');
+  await page.click('text=Neomax 2024 Template - Nottingham FGC Weekly');
   await new Promise(r => setTimeout(r, 290000));
   // ---------------------
 });
