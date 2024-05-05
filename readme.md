@@ -70,6 +70,6 @@ The first command will pull any updates from the code repo automatically, the se
 The script will run, log in and create you your template weekly. Remember to:
 
 - Update the title of the weekly with the appropriate number
-- Update the start date and end date of the weeklies (the time should be correct)
+- Check the start date and end date of the weeklies (Should be correct, but the script assumes you are making a page for NEXT week)
 - Do the capcha
 - Hit create
