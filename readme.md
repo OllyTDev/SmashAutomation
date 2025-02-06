@@ -47,13 +47,15 @@ Next, you'll need to create a file in the `config\` folder. Create a file in thi
     "contactEmail": "ContactEmailHere",
     "startTime": "HH:MM pm",
     "endTime": "HH:MM pm",
-    "dayOfWeek": "dayOfWeek"
+    "dayOfWeek": "dayOfWeek",
+    "template": "nameOfTemplate"
 }
 ```
 Now, fill in the details above into the file. 
 - Username and password are your login details for start.gg.
 - tournamentTitle is the title of your tournament
 - Day of week should be the full name of the day you run on i.e: "Monday" or "Thursday" Etc, capitalizations shouldn't matter
+- template is the name of a previous weekly to base your new page on. I'd recommend making a specific template page but you can just use a previous weeks name.
 
 Once that has finished running, you're ready to run this script in full! 
 
