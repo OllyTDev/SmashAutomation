@@ -56,7 +56,7 @@ var dateOfNextEvent = createSmashGGDate(date)
 var startDate = dateOfNextEvent + " " + json.startTime
 var endDate = dateOfNextEvent + " " + json.endTime
 
-test('Automatic neomax event page', async ({ page }) => {
+test('Automatic event page', async ({ page }) => {
   test.setTimeout(300000);
   // Go to https://start.gg/
   await page.goto('https://start.gg//');
@@ -109,8 +109,9 @@ test('Automatic neomax event page', async ({ page }) => {
   await page.click('text=Search for tournament');
   // Fill input[role="combobox"]
   await page.fill('input[role="combobox"]', 'Template');
-  // Click text=Neomax 2022 #21 - Nottingham FGC Weekly
-  await page.click('text=Neomax 2024 Template - Nottingham FGC Weekly');
+  // Click text=json.template
+  var text = json.template
+  await page.click('text='+text);
   await new Promise(r => setTimeout(r, 290000));
   // ---------------------
 });
