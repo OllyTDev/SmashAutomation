@@ -60,8 +60,8 @@ test('Automatic neomax event page', async ({ page }) => {
   test.setTimeout(300000);
   // Go to https://start.gg/
   await page.goto('https://start.gg//');
-  // Click button:has-text("I Accept")
-  await page.click('button:has-text("Accept")');
+  // Click [aria-label="Accept All"]
+  await page.click('[aria-label="Accept All"]');
   // Click div[role="button"]
   await page.click("[aria-label=\"Login / Register\"]");
   // Click [placeholder="john.smith@gmail.com"]
@@ -77,14 +77,14 @@ test('Automatic neomax event page', async ({ page }) => {
     page.waitForNavigation(/*{ url: 'https://start.gg/' }*/),
     page.click('button:has-text("Login")')
   ]);
-  // Click text=Organize an event
+  // Click text=Create an event
   await Promise.all([
-    page.waitForNavigation(/*{ url: 'https://start.gg/create' }*/),
-    page.click('text=Organize an event')
+    page.waitForNavigation(/*{ url: 'https://www.start.gg/create' }*/),
+    page.click('text=Create an event')
   ]);
   // Click text=Create a tournament
   await Promise.all([
-    page.waitForNavigation(/*{ url: 'https://start.gg/create/tournament' }*/),
+    page.waitForNavigation(/*{ url: 'https://www.start.gg/create/tournament' }*/),
     page.click('text=Create a tournament')
   ]);
   // Click [placeholder="My Awesome Tournament"]
