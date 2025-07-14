@@ -47,13 +47,15 @@ Next, you'll need to create a file in the `config\` folder. Create a file in thi
     "contactEmail": "ContactEmailHere",
     "startTime": "HH:MM pm",
     "endTime": "HH:MM pm",
-    "dayOfWeek": "dayOfWeek"
+    "dayOfWeek": "dayOfWeek",
+    "template": "TitleOfTemplatePage"
 }
 ```
 Now, fill in the details above into the file. 
 - Username and password are your login details for start.gg.
 - tournamentTitle is the title of your tournament
 - Day of week should be the full name of the day you run on i.e: "Monday" or "Thursday" Etc, capitalizations shouldn't matter
+- template: I recommend first setting up a template page that you start.gg can use to copy for each week. Once that's done, use the name of the page in quote marks. For example mine is called: "Neomax 2024 Template - Nottingham FGC Weekly". Basically just try creating a page manually, search in their template box and find what name comes up for your template and use that.
 
 Once that has finished running, you're ready to run this script in full! 
 
