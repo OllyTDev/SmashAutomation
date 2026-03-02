@@ -103,13 +103,13 @@ test('Automatic neomax event page', async ({ page }) => {
   await page.click('text=End Date *End Date >> [placeholder="mm/dd/yyyy hh:mm (a|p)m"]');
   // Fill text=End Date *End DateDate is required >> [placeholder="mm/dd/yyyy hh:mm (a|p)m"]
   await page.fill('text=End Date *End Date >> [placeholder="mm/dd/yyyy hh:mm (a|p)m"]', endDate);
-  // Click text=Copy Tournament Settings
-  await page.click('text=Copy Tournament Settings');
+  // Click text=opy settings from a previous tournament
+  await page.click('text=Copy settings from a previous tournament');
   // Click text=Search for tournament
   await page.click('text=Search for tournament');
   // Fill input[role="combobox"]
   await page.fill('input[role="combobox"]', 'Template');
-  // Click text=Neomax 2022 #21 - Nottingham FGC Weekly
+  // Click text=Neomax 2024 Template - Nottingham FGC Weekly
   await page.click('text=Neomax 2024 Template - Nottingham FGC Weekly');
   await new Promise(r => setTimeout(r, 290000));
   // ---------------------
