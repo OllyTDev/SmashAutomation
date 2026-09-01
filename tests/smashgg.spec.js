@@ -76,19 +76,29 @@ test('Automatic neomax event page', async ({ page }) => {
   await Promise.all([
     page.waitForNavigation(/*{ url: 'https://start.gg/' }*/),
     page.click('button:has-text("Login")')
-  ]);
-  // Click text=Create an event
+  ]); // Click text=Create an event
   await Promise.all([
     page.waitForNavigation(/*{ url: 'https://www.start.gg/create' }*/),
     page.click('text=Create an event')
   ]);
   // Click text=Create a tournament
+ 
+  // Click text=Create a tournament
   await Promise.all([
     page.waitForNavigation(/*{ url: 'https://www.start.gg/create/tournament' }*/),
     page.click('text=Create a tournament')
   ]);
+  // Click a:has-text("Clone a past tournamentCopy settings, events, and more from a tournament you've ")
+  await page.click('a:has-text("Clone a past tournamentCopy settings, events, and more from a tournament you\'ve ")');
+  await expect(page).toHaveURL('https://www.start.gg/create/tournament/clone');
+  // Click [placeholder="Search your tournaments"]
+  await page.click('[placeholder="Search your tournaments"]');
+  // Fill [placeholder="Search your tournaments"]
+  await page.fill('[placeholder="Search your tournaments"]', json.template);
+  // Click button:has-text("Neomax 2026 Template - Nottingham FGC WeeklySep 3, 2026 · Nottingham")
+  await page.click(`button:has-text('${json.template}')`);
   // Click [placeholder="My Awesome Tournament"]
-  await page.click('[placeholder="My Awesome Tournament"]');
+  await page.click('[placeholder="My Awesome Tournament"]');  
   // Fill [placeholder="My Awesome Tournament"]
   await page.fill('[placeholder="My Awesome Tournament"]', json.tournamentTitle);
   // Click [placeholder="hello@start.gg"]
